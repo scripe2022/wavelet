@@ -8,7 +8,11 @@ class Handler implements URLHandler {
 	List<String> s = new ArrayList<String>();
 	public String handleRequest(URI url) {
 		if (url.getPath().equals("/")) {
-			return "200";
+			String rtn = "";
+			for (int i = 0; i < s.size(); ++i) {
+				rtn = rtn + s.get(i) + "\n";
+			}
+			return rtn;
 		}
 		else if (url.getPath().contains("/add")) {
 			String[] params = url.getQuery().split("=");
