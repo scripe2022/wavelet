@@ -3,8 +3,6 @@ import java.net.URI;
 import java.util.*;
 
 class Handler implements URLHandler {
-
-
 	List<String> s = new ArrayList<String>();
 	public String handleRequest(URI url) {
 		if (url.getPath().equals("/")) {
